@@ -1,2 +1,2 @@
-# Blue_Hills_Tea_Web
+# Blue Hills Tea Web System
 Web system for Blue Hills tea factory
