@@ -33,7 +33,7 @@ const Hero = () => {
           delay: 3000,
           disableOnInteraction: false,
         }}
-        onSlideChange={handleSlideChange} 
+        onSlideChange={handleSlideChange}
         className="w-full h-full"
       >
         <SwiperSlide>
@@ -43,7 +43,7 @@ const Hero = () => {
               alt="Slide 1"
               className="w-full h-screen object-cover"
             />
-             <div className="absolute inset-0 bg-[#03045E6B]"></div>
+            <div className="absolute inset-0 bg-[#03045E6B]"></div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -54,7 +54,6 @@ const Hero = () => {
               className="w-full h-screen object-cover"
             />
             <div className="absolute inset-0 bg-[#03045E6B]"></div>{" "}
-           
           </div>
         </SwiperSlide>
 
@@ -65,7 +64,7 @@ const Hero = () => {
               alt="Slide 3"
               className="w-full h-screen object-cover"
             />
-             <div className="absolute inset-0 bg-[#03045E6B]"></div>
+            <div className="absolute inset-0 bg-[#03045E6B]"></div>
           </div>
         </SwiperSlide>
       </Swiper>
