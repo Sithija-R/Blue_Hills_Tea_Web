@@ -33,7 +33,7 @@ const Hero = () => {
           delay: 3000,
           disableOnInteraction: false,
         }}
-        onSlideChange={handleSlideChange} // Track slide changes
+        onSlideChange={handleSlideChange} 
         className="w-full h-full"
       >
         <SwiperSlide>
@@ -54,7 +54,7 @@ const Hero = () => {
               className="w-full h-screen object-cover"
             />
             <div className="absolute inset-0 bg-[#03045E6B]"></div>{" "}
-            {/* Blue transparent overlay */}
+           
           </div>
         </SwiperSlide>
 
