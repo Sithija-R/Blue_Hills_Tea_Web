@@ -11,7 +11,7 @@ const ContactForm = () => {
           <label className="block text-sm font-semibold mb-1">Full Name</label>
           <input
             type="text"
-            className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-full p-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-100 rounded-2xl"
             placeholder="Enter your full name"
           />
         </div>
@@ -20,7 +20,7 @@ const ContactForm = () => {
           <label className="block text-sm font-semibold mb-1">Email Address</label>
           <input
             type="email"
-            className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-100 rounded-2xl"
             placeholder="Your email address"
           />
         </div>
@@ -29,7 +29,7 @@ const ContactForm = () => {
           <label className="block text-sm font-semibold mb-1">Mobile Number (Optional)</label>
           <input
             type="tel"
-            className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-100 rounded-2xl"
             placeholder="+94 (55) 555-5555"
           />
         </div>
@@ -38,7 +38,7 @@ const ContactForm = () => {
           <label className="block text-sm font-semibold mb-1">Subject</label>
           <input
             type="text"
-            className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-100 rounded-2xl"
             placeholder="What is your message about?"
           />
         </div>
@@ -46,7 +46,7 @@ const ContactForm = () => {
         <div>
           <label className="block text-sm font-semibold mb-1">Message</label>
           <textarea
-            className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-100 rounded-2xl"
             rows="5"
             placeholder="Please provide details about your inquiry or feedback.."
           ></textarea>
@@ -54,7 +54,7 @@ const ContactForm = () => {
 
         <button
           type="submit"
-          className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-full"
+          className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-2xl"
         >
           Submit Message
         </button>
