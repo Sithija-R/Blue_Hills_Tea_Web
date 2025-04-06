@@ -11,7 +11,6 @@ import { slideIn } from "../utils/motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
-
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -37,7 +36,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative w-full h-screen overflow-y-scroll">
+    <div className="relative w-full h-screen overflow-y-scroll hideScrollBar">
       {/* Hero Section */}
       <section className="relative h-screen">
         {/* Navbar */}
@@ -117,19 +116,19 @@ const Hero = () => {
 
       {/* About Section */}
       <section ref={ref} className="w-full h-screen mt-34">
-        <div className="flex justify-evenly xl:flex-row flex-col-reverse gap-10 px-20">
+        <div className="flex justify-evenly lg:flex-row flex-col-reverse gap-10 lg:px-20 px-8">
           {/* Image with Slide-in Animation */}
           <motion.div
             variants={slideIn("left", "tween", 0.2)}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.5 }}
-            className="flex-[0.95] bg-black-100 p-8 rounded-2xl"
+            className="lg:flex-[0.95]  flex bg-black-100 lg:p-8 rounded-2xl"
           >
             <motion.img
               src="https://www.bluelankatours.com/wp-content/uploads/2024/11/Pedro-Tea-Estate-Sri-Lanka.jpg"
               alt="factory"
-              className="rounded-2xl "
+              className="w-full  rounded-2xl object-cover"
               whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
             />
           </motion.div>
@@ -140,7 +139,7 @@ const Hero = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.5 }}
-            className="min-h-50 max-w-[40%] pt-13"
+            className="min-h-50  lg:max-w-[40%] w-full pt-13"
           >
             <motion.p
               className="text-[#0069FF] font-medium"
@@ -148,7 +147,6 @@ const Hero = () => {
             >
               Blue Hill Tea Factory
             </motion.p>
-            
 
             {/* Staggered Text Animation */}
             <motion.p
@@ -179,12 +177,17 @@ const Hero = () => {
 
             <div className="bg-[#CBD5E1] min-h-[1.5px] rounded-lg opacity-50 mt-5"></div>
 
-            <motion.div className="mt-8 flex items-center gap-2 justify-end px-8 cursor-pointer" whileHover={{ scale: 1.05 }}>
+            <motion.div
+              className="mt-8 flex items-center gap-2 justify-end px-8 cursor-pointer"
+              whileHover={{ scale: 1.05 }}
+            >
               <motion.p className=" text-[#2563EB] font-medium">
                 Read Full Story
               </motion.p>
-              <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="text-blue-600 ml-2" />
-             
+              <FontAwesomeIcon
+                icon={faArrowUpRightFromSquare}
+                className="text-blue-600 ml-2"
+              />
             </motion.div>
           </motion.div>
         </div>

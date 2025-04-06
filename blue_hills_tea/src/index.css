@@ -33,3 +33,19 @@
   background: none !important; /* Remove default bullet background */
   border: none !important; /* Remove default bullet border */
 }
+
+.hideScrollBar {
+  overflow-y: auto;     /* enable vertical scrolling */
+  overflow-x: hidden;   /* hide horizontal scrollbar */
+}
+
+/* Scrollbar styling for vertical scrollbar */
+.hideScrollBar::-webkit-scrollbar {
+  width: 5px;
+  background-color: #F5F5F5;
+}
+
+.hideScrollBar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #1cbacf;
+}
