@@ -11,7 +11,7 @@ const ContactForm = () => {
           <label className="block text-sm font-semibold mb-1">Full Name</label>
           <input
             type="text"
-            className="w-full p-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-100 rounded-2xl"
+            className="w-full p-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-100 rounded-2xl mb-3"
             placeholder="Enter your full name"
           />
         </div>
@@ -20,7 +20,7 @@ const ContactForm = () => {
           <label className="block text-sm font-semibold mb-1">Email Address</label>
           <input
             type="email"
-            className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-100 rounded-2xl"
+            className="w-full p-2 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-100 rounded-2xl mb-3"
             placeholder="Your email address"
           />
         </div>
@@ -29,7 +29,7 @@ const ContactForm = () => {
           <label className="block text-sm font-semibold mb-1">Mobile Number (Optional)</label>
           <input
             type="tel"
-            className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-100 rounded-2xl"
+            className="w-full p-2 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-100 rounded-2xl mb-3"
             placeholder="+94 (55) 555-5555"
           />
         </div>
@@ -38,7 +38,7 @@ const ContactForm = () => {
           <label className="block text-sm font-semibold mb-1">Subject</label>
           <input
             type="text"
-            className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-100 rounded-2xl"
+            className="w-full p-2 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-100 rounded-2xl mb-3"
             placeholder="What is your message about?"
           />
         </div>
@@ -46,7 +46,7 @@ const ContactForm = () => {
         <div>
           <label className="block text-sm font-semibold mb-1">Message</label>
           <textarea
-            className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-100 rounded-2xl"
+            className="w-full p-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-100 rounded-2xl mb-3"
             rows="5"
             placeholder="Please provide details about your inquiry or feedback.."
           ></textarea>
