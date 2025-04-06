@@ -1,0 +1,54 @@
+/* Hide scrollbars (used in Contact.jsx) */
+.hideScrollBar::-webkit-scrollbar {
+    display: none;
+  }
+  .hideScrollBar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+  
+  /* Glassmorphism card effect (optional – for a modern frosted look) */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Form input styles (if you want more consistent custom styles) */
+  .custom-input {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s ease-in-out;
+  }
+  
+  .custom-input:focus {
+    border-color: #3DA9FC;
+    box-shadow: 0 0 0 3px rgba(61, 169, 252, 0.2);
+  }
+  
+  /* Button styling for hover effect */
+  .button-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .button-hover:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Heading animation on load (optional, if not using Framer Motion) */
+  .fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
