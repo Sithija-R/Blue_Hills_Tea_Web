@@ -1,7 +1,5 @@
 
-
 import React from 'react';
-import { FiMapPin, FiPhoneCall, FiClock } from 'react-icons/fi';
 import { SlCalender } from "react-icons/sl";
 import { GiCoffeeCup } from "react-icons/gi";
 import { HiUserGroup } from "react-icons/hi2";
