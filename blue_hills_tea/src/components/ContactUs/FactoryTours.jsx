@@ -1,13 +1,10 @@
 
 import React from 'react';
-import { SlCalender } from "react-icons/sl";
-import { GiCoffeeCup } from "react-icons/gi";
-import { HiUserGroup } from "react-icons/hi2";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt, faMugHot, faUsers } from '@fortawesome/free-solid-svg-icons';
+import { motion } from 'framer-motion';
 
 
-import './Contact.css';
 
 const FactoryTours = () => {
   return (
@@ -19,16 +16,16 @@ const FactoryTours = () => {
       
       <div className="flex flex-col md:flex-row justify-center items-center gap-8 mt-8">
         
-        <div className="bg-blue-100 bg-opacity-10 backdrop-blur-lg p-6 rounded-xl shadow-md w-full md:w-1/3 text-center min-h-[275px] transform transition-all duration-200 hover:scale-105">
+        <motion.div className="bg-blue-100 bg-opacity-10 backdrop-blur-lg p-6 rounded-xl shadow-md w-full md:w-1/3 text-center min-h-[275px] transform transition-all duration-200 hover:scale-105">
           <div className="text-3xl text-blue-500 mx-auto mb-4 text-center w-fit">
           <FontAwesomeIcon icon={faCalendarAlt} />
           </div>
           <h3 className="text-lg font-semibold mb-2">Daily Tours</h3>
           <p className="text-sm">Monday – Friday<br />10.00am<br />2.00pm</p>
-        </div>
+        </motion.div>
 
         
-        <div className="bg-blue-100 bg-opacity-10 backdrop-blur-lg p-6 rounded-xl shadow-md w-full md:w-1/3 text-center min-h-[275px] transform transition-all duration-200 hover:scale-105">
+        <motion.div className="bg-blue-100 bg-opacity-10 backdrop-blur-lg p-6 rounded-xl shadow-md w-full md:w-1/3 text-center min-h-[275px] transform transition-all duration-200 hover:scale-105">
           <div className="text-3xl text-blue-500 mx-auto mb-4 text-center w-fit">
           <FontAwesomeIcon icon={faMugHot} />
           </div>
@@ -38,10 +35,10 @@ const FactoryTours = () => {
             11.00am<br />
             (Reservation Required)
           </p>
-        </div>
+        </motion.div>
 
         
-        <div className="bg-blue-100 bg-opacity-10 backdrop-blur-lg p-6 rounded-xl shadow-md w-full md:w-1/3 text-center min-h-[275px] transform transition-all duration-200 hover:scale-105">
+        <motion.div className="bg-blue-100 bg-opacity-10 backdrop-blur-lg p-6 rounded-xl shadow-md w-full md:w-1/3 text-center min-h-[275px] transform transition-all duration-200 hover:scale-105">
           <div className="text-3xl text-blue-500 mx-auto mb-4 text-center w-fit">
           <FontAwesomeIcon icon={faUsers} />
           </div>
@@ -50,14 +47,14 @@ const FactoryTours = () => {
             Monday – Friday <br />
             11.00am 
           </p>
-        </div>
+        </motion.div>
 
       </div>
 
         <div className="flex justify-center mt-8">
-          <button className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded-xl text-sm shadow">
+          <motion.button whileHover={{ scale: 1.1 }} transition={{ duration: 0.2 }} className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded-xl text-sm shadow">
             Book Your Tour
-          </button>
+          </motion.button>
         </div>
 
     </div>
