@@ -3,6 +3,9 @@ import React from 'react';
 import { SlCalender } from "react-icons/sl";
 import { GiCoffeeCup } from "react-icons/gi";
 import { HiUserGroup } from "react-icons/hi2";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalendarAlt, faMugHot, faUsers } from '@fortawesome/free-solid-svg-icons';
+
 
 import './Contact.css';
 
@@ -18,7 +21,7 @@ const FactoryTours = () => {
         
         <div className="bg-blue-100 bg-opacity-10 backdrop-blur-lg p-6 rounded-xl shadow-md w-full md:w-1/3 text-center min-h-[275px] transform transition-all duration-200 hover:scale-105">
           <div className="text-3xl text-blue-500 mx-auto mb-4 text-center w-fit">
-            <SlCalender />
+          <FontAwesomeIcon icon={faCalendarAlt} />
           </div>
           <h3 className="text-lg font-semibold mb-2">Daily Tours</h3>
           <p className="text-sm">Monday – Friday<br />10.00am<br />2.00pm</p>
@@ -27,7 +30,7 @@ const FactoryTours = () => {
         
         <div className="bg-blue-100 bg-opacity-10 backdrop-blur-lg p-6 rounded-xl shadow-md w-full md:w-1/3 text-center min-h-[275px] transform transition-all duration-200 hover:scale-105">
           <div className="text-3xl text-blue-500 mx-auto mb-4 text-center w-fit">
-            <GiCoffeeCup />
+          <FontAwesomeIcon icon={faMugHot} />
           </div>
           <h3 className="text-lg font-semibold mb-2">Tea Tasting Sessions</h3>
           <p className="text-sm">
@@ -40,7 +43,7 @@ const FactoryTours = () => {
         
         <div className="bg-blue-100 bg-opacity-10 backdrop-blur-lg p-6 rounded-xl shadow-md w-full md:w-1/3 text-center min-h-[275px] transform transition-all duration-200 hover:scale-105">
           <div className="text-3xl text-blue-500 mx-auto mb-4 text-center w-fit">
-            <HiUserGroup />
+          <FontAwesomeIcon icon={faUsers} />
           </div>
           <h3 className="text-lg font-semibold mb-2">Group Booking</h3>
           <p className="text-sm">

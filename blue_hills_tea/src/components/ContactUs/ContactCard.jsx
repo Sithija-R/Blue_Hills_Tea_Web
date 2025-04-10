@@ -1,8 +1,9 @@
 
-
 import React from 'react';
-import { FiMapPin, FiPhoneCall, FiClock } from 'react-icons/fi';
 import './Contact.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapMarkerAlt, faPhoneAlt, faClock } from '@fortawesome/free-solid-svg-icons';
+
 
 const ContactCard = () => {
   return (
@@ -15,7 +16,7 @@ const ContactCard = () => {
         
         <div className="bg-blue-100 bg-opacity-10 backdrop-blur-lg p-6 rounded-xl shadow-md w-full md:w-1/3 text-left min-h-[275px] transform transition-all duration-200 hover:scale-105">
           <div className="text-3xl text-blue-500 mx-auto mb-4">
-            <FiMapPin />
+          <FontAwesomeIcon icon={faMapMarkerAlt} />
           </div>
           <h3 className="text-lg font-semibold mb-2">Visit Our Factory</h3>
           <p className="text-sm">Blue Hill Tea Factory,<br />Bogawanthalawa,<br />Balangoda</p>
@@ -27,7 +28,7 @@ const ContactCard = () => {
         
         <div className="bg-blue-100 bg-opacity-10 backdrop-blur-lg p-6 rounded-xl shadow-md w-full md:w-1/3 text-left min-h-[275px] transform transition-all duration-200 hover:scale-105">
           <div className="text-3xl text-blue-500 mx-auto mb-4">
-            <FiPhoneCall />
+          <FontAwesomeIcon icon={faPhoneAlt} />
           </div>
           <h3 className="text-lg font-semibold mb-2">Call Us</h3>
           <p className="text-sm">
@@ -43,7 +44,7 @@ const ContactCard = () => {
         
         <div className="bg-blue-100 bg-opacity-10 backdrop-blur-lg p-6 rounded-xl shadow-md w-full md:w-1/3 text-left min-h-[275px] transform transition-all duration-200 hover:scale-105">
           <div className="text-3xl text-blue-500 mx-auto mb-4">
-            <FiClock />
+          <FontAwesomeIcon icon={faClock} />
           </div>
           <h3 className="text-lg font-semibold mb-2">Opening Hours</h3>
           <p className="text-sm">
