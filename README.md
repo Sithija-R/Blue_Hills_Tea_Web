@@ -17,3 +17,6 @@ This project aims to create a modern, responsive, and user-friendly web experien
 1. Clone the repository:
    ```bash
    git clone https://github.com/Sithija-R/Blue_Hills_Tea_Web.git
+
+## UI
+[Figma](https://www.figma.com/design/OHcIZJHlppIP1KB27ZDcBA/Tea-Factory-Web?node-id=3-2&t=49q9tdzfavwXq2hc-1)
