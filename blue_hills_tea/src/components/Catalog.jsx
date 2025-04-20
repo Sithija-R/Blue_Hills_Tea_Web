@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar'
 import { motion } from 'motion/react'
+import Footer from './Footer'
 
 const Catalog = () => {
   return (
@@ -20,6 +21,7 @@ const Catalog = () => {
         Tea Catalog
       </motion.h1>
     </section>
+    <Footer />
   </div>
   )
 }
