@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import { motion } from "motion/react";
+import Footer from "./Footer";
 
 const About = () => {
   return (
@@ -20,6 +21,8 @@ const About = () => {
           About
         </motion.h1>
       </section>
+
+      <Footer />
     </div>
   );
 };

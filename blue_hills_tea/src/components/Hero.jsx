@@ -10,6 +10,7 @@ import { shortAbout } from "../contents";
 import { slideIn } from "../utils/motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import Footer from "./Footer";
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -192,6 +193,7 @@ const Hero = () => {
           </motion.div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

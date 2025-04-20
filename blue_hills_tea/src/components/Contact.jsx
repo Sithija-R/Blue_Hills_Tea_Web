@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 import ContactForm from './ContactUs/ContactForm';
 import ContactCard from './ContactUs/ContactCard';
 import FactoryTours from './ContactUs/FactoryTours';
+import Footer from './Footer';
 
 const Contact = () => {
   return (
@@ -34,7 +35,13 @@ const Contact = () => {
         <FactoryTours />
       </div>
 
+      <div className="mt-16">
+        <Footer />
+      </div>
+
     </section>
+
+   
 
   </div>
   )
