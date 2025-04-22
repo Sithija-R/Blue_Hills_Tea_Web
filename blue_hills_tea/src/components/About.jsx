@@ -1,29 +1,39 @@
 import React from "react";
 import Navbar from "./Navbar";
 import { motion } from "motion/react";
+import { StorySection } from "./aboutme/StorySection";
+import { Owner } from "./aboutme/Owner";
+import { OurTeam } from "./aboutme/OurTeam";
+import { StandFor } from "./aboutme/StandFor";
 import Footer from "./Footer";
+
 
 const About = () => {
   return (
-    <div className="relative w-full h-screen overflow-y-scroll hideScrollBar bg-green-200">
-     
-      <section className="relative h-screen">
-      
-        <header className="z-50 absolute top-13 w-full flex justify-center">
-          <Navbar />
-        </header>
+<div className="relative w-full h-screen overflow-y-scroll hideScrollBar bg-[#EDEDED]">
+  <header className="z-50 w-full flex justify-center py-3">
+    <Navbar />
+  </header>
 
-        {/* Heading */}
-        <motion.h1
-          whileHover={{ scale: 1.2 }}
-          className="absolute top-[40%] left-1/2 transform -translate-x-1/2  text-center font-semibold text-4xl md:text-6xl font-league z-20"
-        >
-          About
-        </motion.h1>
-      </section>
+  <section className="relative w-full">
+   <h1 className="text-4xl font-bold text-blue-500 text-center mt-2">Our Story</h1>
+  </section>
 
-      <Footer />
-    </div>
+  <section className="relative w-full h-screen">
+    <StorySection/>
+  </section>
+  <section className="relative w-full">
+    <Owner/>
+  </section>
+  <section className="relative w-full">
+    <OurTeam/>
+  </section>
+  <section className="relative w-full">
+    <StandFor/>
+  </section>
+     <Footer />
+</div>
+
   );
 };
 
