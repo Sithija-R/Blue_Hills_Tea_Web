@@ -9,6 +9,7 @@ import {
   PaginationInactive,
   PaginationActive,
   Tea_Leave,
+  Leave_Pattern,
 } from "../assets";
 import Navbar from "./Navbar";
 import { shortAbout } from "../contents";
@@ -262,13 +263,13 @@ const Hero = () => {
           </motion.div>
         </div>
       </section>
-      <section className="w-full relative h-full mt-34  bg-lime-100 flex justify-center">
-        <div className="px-40 py-20 bg-red-100 flex flex-col items-center">
+      <section className="w-full relative mb-10 mt-20   flex justify-center">
+        <div className="relative  px-80 py-20  flex flex-col items-center shadow-lg">
           <motion.p className="  font-semibold text-[36px] mb-20">
             Present Tea Production
           </motion.p>
-          <div className="flex justify-between gap-20">
-            <motion.p className="text-[52px] font-semibold text-center flex flex-col">
+          <div className="flex justify-between gap-20 pb-20 border-b-2 border-black/10">
+            <motion.p whileHover={{scale:1.05}} className="text-[52px] font-semibold text-center flex flex-col">
               750,000kg
               <span className="font-medium text-[16px] text-[#52525B]">
                 Annual Tea Production
@@ -277,25 +278,36 @@ const Hero = () => {
                 Crafted to perfection
               </span>
             </motion.p>
-            <motion.p className="text-[52px] font-semibold text-center flex flex-col">
-             15+
+            <motion.p whileHover={{scale:1.05}} className="text-[52px] font-semibold text-center flex flex-col">
+              15+
               <span className="font-medium text-[16px] text-[#52525B]">
-              Market Reach
+                Market Reach
               </span>
               <span className="font-light text-[14px] text-[#52525B]">
-              Sri Lanka to the world
+                Sri Lanka to the world
               </span>
             </motion.p>
-            <motion.p className="text-[52px] font-semibold text-center flex flex-col">
-            3000kg
+            <motion.p whileHover={{scale:1.05}} className="text-[52px] font-semibold text-center flex flex-col">
+              3000kg
               <span className="font-medium text-[16px] text-[#52525B]">
-              Daily Processing Capacity
+                Daily Processing Capacity
               </span>
               <span className="font-light text-[14px] text-[#52525B]">
-              Fresh leaves, finest brew
+                Fresh leaves, finest brew
               </span>
             </motion.p>
           </div>
+          <motion.button 
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="mt-10 text-[16px] bg-[#2563EB] text-white font-semibold p-4 rounded-4xl cursor-pointer">
+            More About Tea Production
+          </motion.button>
+          <motion.img className="absolute left-0" src={Leave_Pattern} />
+          <motion.img
+            className="absolute right-0 -scale-x-100"
+            src={Leave_Pattern}
+          />
         </div>
       </section>
       <Footer />
