@@ -5,6 +5,7 @@ import { StorySection } from "./aboutme/StorySection";
 import { Owner } from "./aboutme/Owner";
 import { OurTeam } from "./aboutme/OurTeam";
 import { StandFor } from "./aboutme/StandFor";
+import Footer from "./Footer";
 
 
 const About = () => {
@@ -30,6 +31,7 @@ const About = () => {
   <section className="relative w-full">
     <StandFor/>
   </section>
+     <Footer />
 </div>
 
   );
