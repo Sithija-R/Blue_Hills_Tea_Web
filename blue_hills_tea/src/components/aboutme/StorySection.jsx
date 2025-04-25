@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import os1 from "../../assets/images/os1.jpg";
-import os2 from "../../assets/images/os2.jpg";
+import { Os1, Os2 } from "../../assets";
 
 export const StorySection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const images = [os1, os2];
+  const images = [Os1,Os2];
 
   useEffect(() => {
     const interval = setInterval(() => {
