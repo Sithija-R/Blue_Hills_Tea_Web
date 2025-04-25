@@ -11,11 +11,11 @@ import Footer from "./Footer";
 const About = () => {
   return (
 <div className="relative w-full h-screen overflow-y-scroll hideScrollBar bg-[#EDEDED]">
-  <header className="z-50 w-full flex justify-center py-3">
-    <Navbar />
-  </header>
+<header className="z-50 absolute top-13 w-full flex justify-center">
+        <Navbar />
+      </header>
 
-  <section className="relative w-full">
+  <section className="relative w-full mt-35">
    <h1 className="text-4xl font-bold text-blue-500 text-center mt-2">Our Story</h1>
   </section>
 
