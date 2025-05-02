@@ -9,6 +9,7 @@ import {
   PaginationInactive,
   PaginationActive,
   Tea_Leave,
+  Leave_Pattern,
 } from "../assets";
 import Navbar from "./Navbar";
 import { shortAbout } from "../contents";
@@ -16,10 +17,13 @@ import { slideIn } from "../utils/motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import Footer from "./Footer";
+import { teas } from "./teacatalogue/teaDatas";
+import TeaCard from "./teacatalogue/TeaCard";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
+  const navigate = useNavigate();
   const ref = useRef(null);
   const isInView = useInView(ref, { triggerOnce: true, margin: "-100px" });
 
@@ -130,7 +134,7 @@ const Hero = () => {
               }
               alt={`Pagination ${index}`}
               className={`${
-                index === currentIndex ? "w-8 h-8" : "w-6 h-6"
+                index === 1 ? "w-7 h-7" : "w-6 h-6"
               } ml-5`}
             />
           ))}
@@ -164,7 +168,7 @@ const Hero = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.5 }}
-            className="lg:flex-[0.95]  flex bg-black-100 lg:p-8 rounded-2xl "
+            className="lg:flex-[0.95]  flex bg-black-100 lg:p-8 rounded-2xl mt-35 lg:mt-0 "
           >
             <motion.img
               src="https://www.bluelankatours.com/wp-content/uploads/2024/11/Pedro-Tea-Estate-Sri-Lanka.jpg"
@@ -219,6 +223,7 @@ const Hero = () => {
             <div className="bg-[#CBD5E1] min-h-[1.5px] rounded-lg opacity-50 mt-5"></div>
 
             <motion.div
+              onClick={() => navigate("/about")}
               className="mt-8 flex items-center gap-2 justify-end px-8 cursor-pointer"
               whileHover={{ scale: 1.05 }}
               style={{ transformOrigin: "right center" }}
@@ -234,7 +239,7 @@ const Hero = () => {
           </motion.div>
         </div>
       </section>
-      <section className="w-full  h-full mt-34 px-10">
+      <section className="w-full  min-h-screen lg:mt-34 mt-160 px-10 relative">
         <motion.p className=" text-[#2563EB] font-medium text-xl">
           Tea Catalogue
         </motion.p>
@@ -242,15 +247,16 @@ const Hero = () => {
           Explore Our Finest Tea Selection
         </p>
         <div>
-          <div className="px-15 mt-5 flex flex-wrap gap-15">
-            {[1, 1, 1, 1, 1, 1, 1, 1].map((_, index) => (
-              <CatalogCard />
+          <div className="px-15 mt-5 flex flex-wrap gap-20 items-center justify-center">
+            {teas.slice(0, 8).map((tea) => (
+              <TeaCard key={tea.id} tea={tea} />
             ))}
           </div>
           <motion.div
+            onClick={() => navigate("/catalog")}
             className="mt-8 flex items-center gap-2 justify-end px-8 cursor-pointer"
             whileHover={{ scale: 1.05 }}
-            style={{ transformOrigin: "right center" }} // ← anchor point here
+            style={{ transformOrigin: "right center" }}
           >
             <motion.p className="text-[#2563EB] font-medium">
               Full Catalogue
@@ -262,40 +268,56 @@ const Hero = () => {
           </motion.div>
         </div>
       </section>
-      <section className="w-full relative h-full mt-34  bg-lime-100 flex justify-center">
-        <div className="px-40 py-20 bg-red-100 flex flex-col items-center">
+      <section className="w-full relative mb-10 mt-20   flex justify-center">
+        <div className="relative  px-80 py-20  flex flex-col items-center shadow-lg">
           <motion.p className="  font-semibold text-[36px] mb-20">
             Present Tea Production
           </motion.p>
-          <div className="flex justify-between gap-20">
-            <motion.p className="text-[52px] font-semibold text-center flex flex-col">
-              750,000kg
-              <span className="font-medium text-[16px] text-[#52525B]">
-                Annual Tea Production
-              </span>
-              <span className="font-light text-[14px] text-[#52525B]">
-                Crafted to perfection
-              </span>
-            </motion.p>
-            <motion.p className="text-[52px] font-semibold text-center flex flex-col">
-             15+
-              <span className="font-medium text-[16px] text-[#52525B]">
-              Market Reach
-              </span>
-              <span className="font-light text-[14px] text-[#52525B]">
-              Sri Lanka to the world
-              </span>
-            </motion.p>
-            <motion.p className="text-[52px] font-semibold text-center flex flex-col">
-            3000kg
-              <span className="font-medium text-[16px] text-[#52525B]">
-              Daily Processing Capacity
-              </span>
-              <span className="font-light text-[14px] text-[#52525B]">
-              Fresh leaves, finest brew
-              </span>
-            </motion.p>
+          <div className="grid grid-cols-1 xl:grid-cols-3 gap-10 border-b-2 border-black/10 pb-10">
+            {[
+              {
+                amount: "750,000kg",
+                title: "Annual Tea Production",
+                subtitle: "Crafted to perfection",
+              },
+              {
+                amount: "15+",
+                title: "Market Reach",
+                subtitle: "Sri Lanka to the world",
+              },
+              {
+                amount: "3000kg",
+                title: "Daily Processing Capacity",
+                subtitle: "Fresh leaves, finest brew",
+              },
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                whileHover={{ scale: 1.05 }}
+                className="text-center"
+              >
+                <p className="text-4xl font-bold">{item.amount}</p>
+                <p className="text-[16px] text-[#52525B] font-medium mt-2">
+                  {item.title}
+                </p>
+                <p className="text-sm text-[#52525B] font-light">
+                  {item.subtitle}
+                </p>
+              </motion.div>
+            ))}
           </div>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="mt-10 text-[16px] bg-[#2563EB] text-white font-semibold p-4 rounded-4xl cursor-pointer"
+          >
+            More About Tea Production
+          </motion.button>
+          <motion.img className="absolute top-0 left-0" src={Leave_Pattern} />
+          <motion.img
+            className="absolute top-0 right-0 -scale-x-100"
+            src={Leave_Pattern}
+          />
         </div>
       </section>
       <Footer />
