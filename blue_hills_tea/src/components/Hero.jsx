@@ -247,7 +247,7 @@ const Hero = () => {
           Explore Our Finest Tea Selection
         </p>
         <div>
-          <div className="px-15 mt-5 flex flex-wrap gap-20 items-center justify-center">
+          <div className="px-1 mt-5 flex flex-wrap gap-20 items-center justify-center">
             {teas.slice(0, 8).map((tea) => (
               <TeaCard key={tea.id} tea={tea} />
             ))}
