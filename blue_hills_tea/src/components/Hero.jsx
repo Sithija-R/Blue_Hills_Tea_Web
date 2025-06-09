@@ -10,6 +10,10 @@ import {
   PaginationActive,
   Tea_Leave,
   Leave_Pattern,
+  Factory1,
+  Factory2,
+  Factory3,
+  Factory4,
 } from "../assets";
 import Navbar from "./Navbar";
 import { shortAbout } from "../contents";
@@ -45,22 +49,6 @@ const Hero = () => {
     setCurrentIndex(swiper.activeIndex);
   };
 
-  const CatalogCard = () => {
-    return (
-      <motion.div
-        whileHover={{ scale: 1.05 }}
-        className="bg-white shadow-lg rounded-xl p-6 max-w-sm"
-      >
-        <img
-          src="https://www.bluelankatours.com/wp-content/uploads/2024/11/Pedro-Tea-Estate-Sri-Lanka.jpg"
-          alt="Tea"
-          className="w-full h-40 object-cover rounded-t-lg"
-        />
-        <h2 className="text-xl font-bold mt-4">Tea Name</h2>
-        <p className="text-gray-600 mt-2">Description of the tea.</p>
-      </motion.div>
-    );
-  };
 
   return (
     <div className="relative w-full h-screen overflow-y-scroll hideScrollBar">
@@ -105,7 +93,7 @@ const Hero = () => {
           <SwiperSlide>
             <div className="relative w-full h-full">
               <img
-                src="https://www.ceylonexpeditions.com/medias/package_places/big/127/shrilanka-tea-estates.jpg"
+                src={Factory3}
                 alt="Slide 2"
                 className="w-full h-screen object-cover"
               />
@@ -115,7 +103,7 @@ const Hero = () => {
           <SwiperSlide>
             <div className="relative w-full h-full">
               <img
-                src="https://www.bluelankatours.com/wp-content/uploads/2024/11/Pedro-Tea-Estate-Sri-Lanka.jpg"
+                src={Factory4}
                 alt="Slide 3"
                 className="w-full h-screen object-cover"
               />
@@ -125,7 +113,7 @@ const Hero = () => {
         </Swiper>
 
         {/* Custom Pagination */}
-        <div className="z-50 absolute bottom-10 left-1/2 transform -translate-x-1/2 flex gap-2">
+        <div className="z-10 absolute bottom-10 left-1/2 transform -translate-x-1/2 flex gap-2">
           {Array.from({ length: 3 }).map((_, index) => (
             <img
               key={index}
@@ -171,7 +159,7 @@ const Hero = () => {
             className="lg:flex-[0.95]  flex bg-black-100 lg:p-8 rounded-2xl mt-35 lg:mt-0 "
           >
             <motion.img
-              src="https://www.bluelankatours.com/wp-content/uploads/2024/11/Pedro-Tea-Estate-Sri-Lanka.jpg"
+              src={Factory3}
               alt="factory"
               className="w-full  rounded-2xl object-cover"
               whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
