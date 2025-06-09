@@ -8,6 +8,11 @@ import Os2 from "./images/aboutpageimages/os2.jpg";
 import TeamImg1 from "./images/aboutpageimages/t1.jpg";
 import TeamImg2 from "./images/aboutpageimages/t2.jpg";
 import OwnerImg from "./images/aboutpageimages/owner.png";
+import  Factory1 from "./images/factory_1.jpg";
+import Factory2 from "./images/factory_2.jpg";
+import Factory3 from "./images/factory_3.jpg";
+import Factory4 from "./images/factory_4.jpg";
+
 
 import BOP from "./images/Tea_catalog/BOP.png";
 import BOP1 from "./images/Tea_catalog/BOP1.png";
@@ -22,12 +27,17 @@ import OP_A from "./images/Tea_catalog/OP_A.png";
 import PEK from "./images/Tea_catalog/PEK.png";
 import PEK_1 from "./images/Tea_catalog/PEK_1.png";
 
+
 export {
   Slider_01,
   PaginationActive,
   PaginationInactive,
   Tea_Leave,
   Leave_Pattern,
+  Factory1,
+  Factory2,
+  Factory3,
+  Factory4,
 
 
 

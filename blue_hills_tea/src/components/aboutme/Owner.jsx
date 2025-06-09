@@ -22,7 +22,7 @@ export const Owner = () => {
               <h3 className="text-black text-2xl font-semibold mb-3 text-center md:text-left">
                 The Heart Behind the Hills
               </h3>
-              <p className="text-gray-600 text-sm leading-6 text-justify">
+              <p className="text-gray-600 text-lg leading-6 text-justify">
                 At the helm of Blue Hill Tea Factory is{" "}
                 <strong>Mr. Chaminda</strong>, a passionate tea enthusiast whose
                 journey is deeply entwined with the rich heritage of Sri Lankan

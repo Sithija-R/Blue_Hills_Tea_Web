@@ -8,7 +8,7 @@ export const StandFor = () => {
         <h3 className="text-black text-2xl font-semibold mb-3 text-center">
           Quality. Sustainability. Community
         </h3>
-        <p className="text-gray-600 text-sm leading-6 text-center max-w-3xl mx-auto">
+        <p className="text-gray-600 text-lg leading-6 text-center  mx-auto lg:px-0 px-7 mt-8">
           We believe in more than just making tea—we believe in doing it right. At Blue Hill Tea Factory, 
           our purpose goes beyond production; it's about honoring a legacy and preserving the natural 
           beauty that surrounds us. Our factory embraces eco-conscious practices that reduce our 
