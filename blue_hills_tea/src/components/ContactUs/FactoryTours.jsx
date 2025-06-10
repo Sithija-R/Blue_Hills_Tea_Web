@@ -45,7 +45,7 @@ const FactoryTours = () => {
           from_name: formData.name,
           to_name: "Blue Hills Tea Factory",
           from_email: formData.email,
-          to_email: "bluehillsemail@gmail.com",
+          to_email: "newbluemounttea@gmail.com",
           phone: formData.contact,
           subject: formData.subject,
           message: formData.message,

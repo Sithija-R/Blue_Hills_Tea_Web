@@ -1,12 +1,12 @@
 import React from "react";
 import Navbar from "./Navbar";
-import { motion } from "motion/react";
+
 import Footer from "./Footer";
 import Catalogue from "./teacatalogue/Catalogue";
 
 const Catalog = () => {
   return (
-    <div className=" w-full h-screen overflow-y-scroll hideScrollBar ">
+    <div className=" w-full h-screen ">
       <section className="relative h-screen ">
         <header className="z-50 absolute top-13 w-full flex justify-center">
           <Navbar />

@@ -7,7 +7,7 @@ const App = () => {
     <BrowserRouter>
       
       <div>
-        <div className="h-screen bg-primary-light flex items-center justify-center">
+        <div className="h-screen bg-primary-light flex items-center justify-center overflow-y-scroll overflow-x-hidden  customScrollBar">
          <Routes>
           <Route path="/" element={<Hero/>} />
           <Route path="/home" element={<Hero/>} />
