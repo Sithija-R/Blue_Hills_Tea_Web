@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -31,16 +31,46 @@
       }
 
       @keyframes spin-preloader {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
       }
     </style>
-    </head>
+  </head>
   <body>
     <div id="preloader">
       <div class="spinner-preloader"></div>
     </div>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    
+    <script>
+      // Hide the preloader when everything is loaded
+      window.addEventListener('load', function() {
+        var preloader = document.getElementById('preloader');
+        if (preloader) {
+          // First fade out
+          preloader.style.opacity = '0';
+          // Then remove after fade completes
+          setTimeout(function() {
+            preloader.style.display = 'none';
+          }, 500); // Match this with your transition duration
+        }
+      });
+      
+      // Optional: Hide preloader if load takes too long (e.g., 5 seconds)
+      setTimeout(function() {
+        var preloader = document.getElementById('preloader');
+        if (preloader && preloader.style.display !== 'none') {
+          preloader.style.opacity = '0';
+          setTimeout(function() {
+            preloader.style.display = 'none';
+          }, 500);
+        }
+      }, 5000);
+    </script>
   </body>
 </html>
