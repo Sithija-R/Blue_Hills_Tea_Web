@@ -10,10 +10,9 @@ import {
   PaginationActive,
   Tea_Leave,
   Leave_Pattern,
-  Factory1,
-  Factory2,
   Factory3,
   Factory4,
+  TeaPot,
 } from "../assets";
 import Navbar from "./Navbar";
 import { shortAbout } from "../contents";
@@ -51,7 +50,7 @@ const Hero = () => {
 
 
   return (
-    <div className="relative w-full h-screen overflow-y-scroll hideScrollBar">
+    <div className="relative w-full h-screen  ">
       {/* Hero Section */}
       <section className="relative h-screen">
         {/* Navbar */}
@@ -93,7 +92,7 @@ const Hero = () => {
           <SwiperSlide>
             <div className="relative w-full h-full">
               <img
-                src={Factory3}
+                src={TeaPot}
                 alt="Slide 2"
                 className="w-full h-screen object-cover"
               />
@@ -301,11 +300,20 @@ const Hero = () => {
           >
             More About Tea Production
           </motion.button>
-          <motion.img className="absolute top-0 left-0" src={Leave_Pattern} />
           <motion.img
-            className="absolute top-0 right-0 -scale-x-100"
-            src={Leave_Pattern}
-          />
+  className="absolute top-0 left-0"
+  src={Leave_Pattern}
+  animate={{ rotate: [0, 2, -2, 2, -2, 0] }}
+  transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+/>
+
+<motion.img
+  className="absolute top-0 right-0 -scale-x-100"
+  src={Leave_Pattern}
+  animate={{ rotate: [0, -2, 2, -2, 2, 0] }}
+  transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+/>
+
         </div>
       </section>
       <Footer />

@@ -7,7 +7,7 @@ import Footer from "./Footer";
 
 const About = () => {
   return (
-    <div className=" w-full h-screen overflow-y-scroll hideScrollBar bg-[#EDEDED]">
+    <div className=" w-full h-screen ">
       <header className="z-50 relative top-13 w-full flex justify-center">
         <Navbar />
       </header>

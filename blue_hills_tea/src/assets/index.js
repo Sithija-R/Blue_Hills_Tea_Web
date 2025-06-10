@@ -8,10 +8,10 @@ import Os2 from "./images/aboutpageimages/os2.jpg";
 import TeamImg1 from "./images/aboutpageimages/t1.jpg";
 import TeamImg2 from "./images/aboutpageimages/t2.jpg";
 import OwnerImg from "./images/aboutpageimages/owner.png";
-import  Factory1 from "./images/factory_1.jpg";
-import Factory2 from "./images/factory_2.jpg";
 import Factory3 from "./images/factory_3.jpg";
 import Factory4 from "./images/factory_4.jpg";
+import TeaPot from "./images/Tea_pot.jpg";
+import TeaCup from "./images/Tea_cup.svg";
 
 
 import BOP from "./images/Tea_catalog/BOP.png";
@@ -34,10 +34,10 @@ export {
   PaginationInactive,
   Tea_Leave,
   Leave_Pattern,
-  Factory1,
-  Factory2,
   Factory3,
   Factory4,
+  TeaPot,
+  TeaCup,
 
 
 

@@ -16,7 +16,7 @@ const ContactCard = () => {
 
   return (
     <div className="w-full flex flex-col px-4 md:px-12 py-12">
-      <h2 className="text-5xl font-bold mb-6 text-left">Contact Us</h2>
+      <h2 className="text-[40px] font-bold mb-6 text-left">Contact Us</h2>
       <p className="text-3xl text-[#4B5563]">
         We’d love to hear from you. Whether you have questions about our teas,
         wholesale inquiries, or feedback, our team is here to help.
@@ -29,9 +29,9 @@ const ContactCard = () => {
           </div>
           <h3 className="text-2xl font-semibold mb-2">Visit Our Factory</h3>
           <p className="text-lg text-[#4B5563] overflow-hidden text-ellipsis whitespace-nowrap">
-            Blue Hills Tea Factory,
+            Blue Hills Tea Factory
             <br />
-            Bogawanthalawa Road,
+            Pinnawala
             <br />
             Balangoda
           </p>

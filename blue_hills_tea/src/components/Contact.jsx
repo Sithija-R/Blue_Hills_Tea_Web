@@ -7,7 +7,7 @@ import Footer from "./Footer";
 
 const Contact = () => {
   return (
-    <div className="relative w-full h-screen overflow-y-scroll  hideScrollBar bg-white">
+    <div className="relative w-full h-screen  ">
       <header className="z-50 absolute top-13 w-full flex justify-center">
         <Navbar />
       </header>
