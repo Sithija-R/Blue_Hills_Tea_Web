@@ -10,14 +10,14 @@ const Catalogue = () => {
     <div className="w-full  text-black  ">
 
 
-{/* About Tea Section */}
+
 <section className="px-10 pt-16 pb-10">
 <h1 className="text-[40px] font-bold text-left text-black">
 About Tea
         </h1>
 
   <div className="flex flex-col md:flex-row items-center gap-10 ">
-    {/* Tea Image Placeholder */}
+
     <img
       src={TeaCup}
       alt="About Tea"
@@ -46,7 +46,7 @@ About Tea
 </section>
 
 
-      {/* Title + Description */}
+   
       <section className="px-10 pt-16">
         <h1 className="text-[40px] font-bold text-left text-black">
           Tea Catalogue
@@ -58,17 +58,17 @@ About Tea
         </p>
       </section>
 
-      {/* Card Grid */}
+      
       <section className="px-10 pt-12 pb-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center">
-          {/* Map through tea data and display TeaCard for each tea */}
+         
           {teas.map((tea) => (
             <TeaCard key={tea.id} tea={tea} />
           ))}
         </div>
       </section>
 
-      {/* Blue Paragraph */}
+      
       <div className="flex-col justify-center items-center px-70">
         <div className="min-h-0.5 mt-5 bg-[#2563EB] w-"></div>
       </div>

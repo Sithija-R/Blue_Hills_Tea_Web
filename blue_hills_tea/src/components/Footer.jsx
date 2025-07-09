@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-100 text-gray-700 py-10 px-0">
       <div className="max-w-11/12 mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
-        {/* Brand */}
+       
         <div>
           <h2 className="text-[23px] font-bold text-blue-900 mb-4">
             BLUE HILLS TEA FACTORY
@@ -23,7 +23,7 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Company */}
+        
         <div>
           <h3 className="text-lg font-semibold text-gray-600 uppercase mb-4 ">
             Explore
@@ -56,13 +56,13 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Help */}
+       
         <div>
           <h3 className="text-lg font-semibold text-gray-600 uppercase mb-4 ">
             Contact
           </h3>
           <ul className="space-y-3 text-sm">
-            {/* Phone */}
+           
             <motion.li
               whileHover={{}}
               className="mb-2 text-lg group cursor-pointer"
@@ -83,7 +83,7 @@ const Footer = () => {
               </div>
             </motion.li>
 
-            {/* Email */}
+            
             <motion.li
               whileHover={{}}
               className="mb-2 text-lg group cursor-pointer"
@@ -104,7 +104,7 @@ const Footer = () => {
               </div>
             </motion.li>
 
-            {/* Address */}
+           
             <motion.li whileHover={{}} className="text-lg group cursor-pointer">
               <div className="flex items-start">
                 <FontAwesomeIcon

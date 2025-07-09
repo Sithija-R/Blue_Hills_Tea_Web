@@ -63,14 +63,14 @@ const WheelChart = () => {
 
   return (
     <div className="relative w-full max-w-[500px] h-[500px] mx-auto">
-      {/* Center Coffee Icon */}
+     
       <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
         <div className="p-6  rounded-full  hover:bg-lime-200 transition-colors duration-300">
           <Coffee className="w-20 h-20 text-yellow-800" />
         </div>
       </div>
 
-      {/* Circular Icons */}
+ 
       {healthData.map((item, i) => {
         const angle = (360 / healthData.length) * i;
         const x = radius * Math.cos((angle - 90) * (Math.PI / 180));

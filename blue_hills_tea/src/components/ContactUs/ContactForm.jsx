@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 
 const ContactForm = () => {
   const [loading, setLoading] = useState(false);
-  console.log("loading ",loading)
+
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",

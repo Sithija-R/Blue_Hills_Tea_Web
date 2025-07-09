@@ -94,7 +94,7 @@ const FactoryTours = () => {
       </p>
 
       <div className="flex flex-col md:flex-row justify-center items-center lg:gap-20 md:gap-10 gap-8 mt-25">
-        {/* Office Tours */}
+  
         <motion.div className="bg-[#2563EB1C] backdrop-blur-lg p-6 rounded-xl shadow-md w-full md:w-1/3 min-h-80 text-left transform transition-all duration-200 hover:scale-105">
           <div className="text-3xl text-blue-500 mb-4 w-fit">
             <FontAwesomeIcon icon={faCalendarAlt} />
@@ -109,7 +109,7 @@ const FactoryTours = () => {
           </p>
         </motion.div>
 
-        {/* Tea Tasting */}
+
         <motion.div className="bg-[#2563EB1C] backdrop-blur-lg p-6 rounded-xl shadow-md w-full md:w-1/3 min-h-80 text-left transform transition-all duration-200 hover:scale-105 relative">
           <div className="text-3xl text-blue-500 mb-4 w-fit">
             <FontAwesomeIcon icon={faMugHot} />
@@ -128,7 +128,7 @@ const FactoryTours = () => {
           </motion.button>
         </motion.div>
 
-        {/* Book a Tour */}
+
         <motion.div className="bg-[#2563EB1C] backdrop-blur-lg p-6 rounded-xl shadow-md w-full md:w-1/3 min-h-80 text-left transform transition-all duration-200 hover:scale-105 relative">
           <div className="text-3xl text-blue-500 mb-4 w-fit">
             <FontAwesomeIcon icon={faUsers} />
@@ -148,7 +148,7 @@ const FactoryTours = () => {
         </motion.div>
       </div>
 
-      {/* Modal */}
+  
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 
         ">

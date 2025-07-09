@@ -27,7 +27,7 @@ export const StorySection = () => {
   return (
     <section className="py-10">
       <div className="max-w-6xl mx-auto px-4">
-        {/* Carousel */}
+   
         <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] overflow-hidden rounded-lg shadow-lg border border-gray-200">
           <div
             className="flex transition-transform duration-500 ease-in-out"
@@ -43,7 +43,7 @@ export const StorySection = () => {
             ))}
           </div>
 
-          {/* Previous Button */}
+    
           <button
             onClick={goToPrevious}
             className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75"
@@ -51,7 +51,7 @@ export const StorySection = () => {
             &#10094;
           </button>
 
-          {/* Next Button */}
+    
           <button
             onClick={goToNext}
             className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75"
@@ -59,7 +59,6 @@ export const StorySection = () => {
             &#10095;
           </button>
 
-          {/* Dots */}
           <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
             {images.map((_, index) => (
               <button
@@ -73,7 +72,7 @@ export const StorySection = () => {
           </div>
         </div>
 
-        {/* Story Text */}
+
         <div className="flex flex-col md:flex-row items-center justify-between text-xl text-gray-700 font-normal text-center mt-6 w-full">
           <img
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/f9302a29ca02da3bfa9f834f491207f843ddc709?placeholderIfAbsent=true"

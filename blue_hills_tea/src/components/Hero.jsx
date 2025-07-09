@@ -30,7 +30,7 @@ const Hero = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { triggerOnce: true, margin: "-100px" });
 
-  // Stagger animation for words
+
   const sentenceVariants = {
     hidden: { opacity: 1 },
     visible: {
@@ -48,17 +48,16 @@ const Hero = () => {
     setCurrentIndex(swiper.activeIndex);
   };
 
-
   return (
     <div className="relative w-full h-screen  ">
-      {/* Hero Section */}
+      
       <section className="relative h-screen">
-        {/* Navbar */}
+       
         <header className="z-50 absolute top-13 w-full flex justify-center">
           <Navbar />
         </header>
 
-        {/* Heading */}
+       
         <motion.h1
           whileHover={{ scale: 1.2 }}
           className="absolute top-[40%] left-1/2 transform -translate-x-1/2 text-white text-center font-semibold text-4xl md:text-6xl font-league z-20"
@@ -67,7 +66,7 @@ const Hero = () => {
           <span className="text-[#00EB3F]">From Sri Lanka</span>
         </motion.h1>
 
-        {/* Swiper Carousel */}
+        
         <Swiper
           modules={[Pagination, Autoplay]}
           spaceBetween={0}
@@ -120,15 +119,13 @@ const Hero = () => {
                 index === currentIndex ? PaginationActive : PaginationInactive
               }
               alt={`Pagination ${index}`}
-              className={`${
-                index === 1 ? "w-7 h-7" : "w-6 h-6"
-              } ml-5`}
+              className={`${index === 1 ? "w-7 h-7" : "w-6 h-6"} ml-5`}
             />
           ))}
         </div>
       </section>
 
-      {/* About Section */}
+      
       <section ref={ref} className="w-full relative h-[70vh] mt-34 ">
         <motion.img
           src={Tea_Leave}
@@ -149,7 +146,7 @@ const Hero = () => {
           whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
         />
         <div className="flex justify-evenly lg:flex-row flex-col-reverse gap-10 lg:px-20 px-8">
-          {/* Image with Slide-in Animation */}
+          
           <motion.div
             variants={slideIn("left", "tween", 0.2)}
             initial="hidden"
@@ -165,7 +162,7 @@ const Hero = () => {
             />
           </motion.div>
 
-          {/* Text Section with Animation */}
+         
           <motion.div
             variants={slideIn("right", "tween", 0.2)}
             initial="hidden"
@@ -180,7 +177,7 @@ const Hero = () => {
               Blue Hill Tea Factory
             </motion.p>
 
-            {/* Staggered Text Animation */}
+            
             <motion.p
               className="text-[#090914] font-medium text-3xl mt-4"
               variants={sentenceVariants}
@@ -301,19 +298,18 @@ const Hero = () => {
             More About Tea Production
           </motion.button>
           <motion.img
-  className="absolute top-0 left-0"
-  src={Leave_Pattern}
-  animate={{ rotate: [0, 2, -2, 2, -2, 0] }}
-  transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-/>
+            className="absolute top-0 left-0"
+            src={Leave_Pattern}
+            animate={{ rotate: [0, 2, -2, 2, -2, 0] }}
+            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+          />
 
-<motion.img
-  className="absolute top-0 right-0 -scale-x-100"
-  src={Leave_Pattern}
-  animate={{ rotate: [0, -2, 2, -2, 2, 0] }}
-  transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-/>
-
+          <motion.img
+            className="absolute top-0 right-0 -scale-x-100"
+            src={Leave_Pattern}
+            animate={{ rotate: [0, -2, 2, -2, 2, 0] }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          />
         </div>
       </section>
       <Footer />
