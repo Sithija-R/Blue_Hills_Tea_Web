@@ -4,14 +4,14 @@ import { Os1, Os2 } from "../../assets";
 export const StorySection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const images = [Os1,Os2];
+  const images = [Os1, Os2];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 5000);
 
-    return () => clearInterval(interval); 
+    return () => clearInterval(interval);
   }, [images.length]);
 
   const goToPrevious = () => {
@@ -25,9 +25,10 @@ export const StorySection = () => {
   };
 
   return (
-    <section className="py-10 ">
+    <section className="py-10">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="relative w-full h-[400px] overflow-hidden rounded-lg shadow-lg">
+   
+        <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] overflow-hidden rounded-lg shadow-lg border border-gray-200">
           <div
             className="flex transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -37,17 +38,20 @@ export const StorySection = () => {
                 key={index}
                 src={image}
                 alt={`Slide ${index + 1}`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover flex-shrink-0"
               />
             ))}
           </div>
 
+    
           <button
             onClick={goToPrevious}
             className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75"
           >
             &#10094;
           </button>
+
+    
           <button
             onClick={goToNext}
             className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75"
@@ -67,24 +71,26 @@ export const StorySection = () => {
             ))}
           </div>
         </div>
-        <div className="flex items-center justify-between text-xl text-gray-700 font-normal text-center mt-4 w-full">
+
+
+        <div className="flex flex-col md:flex-row items-center justify-between text-xl text-gray-700 font-normal text-center mt-6 w-full">
           <img
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/f9302a29ca02da3bfa9f834f491207f843ddc709?placeholderIfAbsent=true"
             alt="Decorative left"
-            className="aspect-[0.73] object-contain w-48 shrink-0"
+            className="w-32 md:w-48 object-contain mb-4 md:mb-0"
           />
           <p className="mx-4 max-w-2xl">
             Nestled in the lush hills of Sri Lanka, Blue Hill Tea Factory began
             with a simple dream—to craft the finest Ceylon tea while honoring
-            tradition and sustainability. From humble beginnings to a renowned tea
-            producer, our journey is one of passion, dedication, and an unwavering
+            tradition and sustainability. From humble beginnings to a renowned
+            tea producer, our journey is one of passion, dedication, and an unwavering
             commitment to quality. Join us as we share the story behind every
             leaf, every blend, and every cup.
           </p>
           <img
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/82697982d3a9633b1fe192b70548f74bb976d2e8?placeholderIfAbsent=true"
             alt="Decorative right"
-            className="aspect-[0.73] object-contain w-48 shrink-0"
+            className="w-32 md:w-48 object-contain mt-4 md:mt-0"
           />
         </div>
       </div>

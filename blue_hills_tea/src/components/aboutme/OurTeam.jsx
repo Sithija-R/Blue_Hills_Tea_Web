@@ -55,7 +55,7 @@ export const OurTeam = () => {
           <h3 className="text-black text-2xl font-semibold mb-3 text-center md:text-left italic">
             The hands and hearts behind every cup
           </h3>
-          <p className="text-gray-600 text-sm leading-6 text-justify">
+          <p className="text-gray-600 text-lg leading-6 text-justify lg:px-0 px-7">
             From skilled pluckers and dedicated factory workers to our quality
             control team, Blue Hill Tea Factory thrives because of the
             passionate individuals who bring care, skill, and soul into every

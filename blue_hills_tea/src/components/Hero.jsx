@@ -10,6 +10,9 @@ import {
   PaginationActive,
   Tea_Leave,
   Leave_Pattern,
+  Factory3,
+  Factory4,
+  TeaPot,
 } from "../assets";
 import Navbar from "./Navbar";
 import { shortAbout } from "../contents";
@@ -27,7 +30,7 @@ const Hero = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { triggerOnce: true, margin: "-100px" });
 
-  // Stagger animation for words
+
   const sentenceVariants = {
     hidden: { opacity: 1 },
     visible: {
@@ -45,33 +48,16 @@ const Hero = () => {
     setCurrentIndex(swiper.activeIndex);
   };
 
-  const CatalogCard = () => {
-    return (
-      <motion.div
-        whileHover={{ scale: 1.05 }}
-        className="bg-white shadow-lg rounded-xl p-6 max-w-sm"
-      >
-        <img
-          src="https://www.bluelankatours.com/wp-content/uploads/2024/11/Pedro-Tea-Estate-Sri-Lanka.jpg"
-          alt="Tea"
-          className="w-full h-40 object-cover rounded-t-lg"
-        />
-        <h2 className="text-xl font-bold mt-4">Tea Name</h2>
-        <p className="text-gray-600 mt-2">Description of the tea.</p>
-      </motion.div>
-    );
-  };
-
   return (
-    <div className="relative w-full h-screen overflow-y-scroll hideScrollBar">
-      {/* Hero Section */}
+    <div className="relative w-full h-screen  ">
+      
       <section className="relative h-screen">
-        {/* Navbar */}
+       
         <header className="z-50 absolute top-13 w-full flex justify-center">
           <Navbar />
         </header>
 
-        {/* Heading */}
+       
         <motion.h1
           whileHover={{ scale: 1.2 }}
           className="absolute top-[40%] left-1/2 transform -translate-x-1/2 text-white text-center font-semibold text-4xl md:text-6xl font-league z-20"
@@ -80,7 +66,7 @@ const Hero = () => {
           <span className="text-[#00EB3F]">From Sri Lanka</span>
         </motion.h1>
 
-        {/* Swiper Carousel */}
+        
         <Swiper
           modules={[Pagination, Autoplay]}
           spaceBetween={0}
@@ -105,7 +91,7 @@ const Hero = () => {
           <SwiperSlide>
             <div className="relative w-full h-full">
               <img
-                src="https://www.ceylonexpeditions.com/medias/package_places/big/127/shrilanka-tea-estates.jpg"
+                src={TeaPot}
                 alt="Slide 2"
                 className="w-full h-screen object-cover"
               />
@@ -115,7 +101,7 @@ const Hero = () => {
           <SwiperSlide>
             <div className="relative w-full h-full">
               <img
-                src="https://www.bluelankatours.com/wp-content/uploads/2024/11/Pedro-Tea-Estate-Sri-Lanka.jpg"
+                src={Factory4}
                 alt="Slide 3"
                 className="w-full h-screen object-cover"
               />
@@ -125,7 +111,7 @@ const Hero = () => {
         </Swiper>
 
         {/* Custom Pagination */}
-        <div className="z-50 absolute bottom-10 left-1/2 transform -translate-x-1/2 flex gap-2">
+        <div className="z-10 absolute bottom-10 left-1/2 transform -translate-x-1/2 flex gap-2">
           {Array.from({ length: 3 }).map((_, index) => (
             <img
               key={index}
@@ -133,15 +119,13 @@ const Hero = () => {
                 index === currentIndex ? PaginationActive : PaginationInactive
               }
               alt={`Pagination ${index}`}
-              className={`${
-                index === 1 ? "w-7 h-7" : "w-6 h-6"
-              } ml-5`}
+              className={`${index === 1 ? "w-7 h-7" : "w-6 h-6"} ml-5`}
             />
           ))}
         </div>
       </section>
 
-      {/* About Section */}
+      
       <section ref={ref} className="w-full relative h-[70vh] mt-34 ">
         <motion.img
           src={Tea_Leave}
@@ -162,7 +146,7 @@ const Hero = () => {
           whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
         />
         <div className="flex justify-evenly lg:flex-row flex-col-reverse gap-10 lg:px-20 px-8">
-          {/* Image with Slide-in Animation */}
+          
           <motion.div
             variants={slideIn("left", "tween", 0.2)}
             initial="hidden"
@@ -171,14 +155,14 @@ const Hero = () => {
             className="lg:flex-[0.95]  flex bg-black-100 lg:p-8 rounded-2xl mt-35 lg:mt-0 "
           >
             <motion.img
-              src="https://www.bluelankatours.com/wp-content/uploads/2024/11/Pedro-Tea-Estate-Sri-Lanka.jpg"
+              src={Factory3}
               alt="factory"
               className="w-full  rounded-2xl object-cover"
               whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
             />
           </motion.div>
 
-          {/* Text Section with Animation */}
+         
           <motion.div
             variants={slideIn("right", "tween", 0.2)}
             initial="hidden"
@@ -193,7 +177,7 @@ const Hero = () => {
               Blue Hill Tea Factory
             </motion.p>
 
-            {/* Staggered Text Animation */}
+            
             <motion.p
               className="text-[#090914] font-medium text-3xl mt-4"
               variants={sentenceVariants}
@@ -313,10 +297,18 @@ const Hero = () => {
           >
             More About Tea Production
           </motion.button>
-          <motion.img className="absolute top-0 left-0" src={Leave_Pattern} />
+          <motion.img
+            className="absolute top-0 left-0"
+            src={Leave_Pattern}
+            animate={{ rotate: [0, 2, -2, 2, -2, 0] }}
+            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+          />
+
           <motion.img
             className="absolute top-0 right-0 -scale-x-100"
             src={Leave_Pattern}
+            animate={{ rotate: [0, -2, 2, -2, 2, 0] }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           />
         </div>
       </section>

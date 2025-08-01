@@ -12,6 +12,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #EDEDED;
 }
 
 
@@ -34,18 +35,21 @@
   border: none !important; /* Remove default bullet border */
 }
 
-.hideScrollBar {
-  overflow-y: auto;     /* enable vertical scrolling */
-  overflow-x: hidden;   /* hide horizontal scrollbar */
+.customScrollBar::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: fff;
+
 }
 
-/* Scrollbar styling for vertical scrollbar */
-.hideScrollBar::-webkit-scrollbar {
-  width: 5px;
-  background-color: #F5F5F5;
-}
-
-.hideScrollBar::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: #1cbacf;
+.customScrollBar::-webkit-scrollbar-thumb
+{
+	border-radius: 20px;
+	background-color: #00baf3;
+	background-image: -webkit-gradient(linear,
+									   40% 0%,
+									   75% 84%,
+									   from(#4D9C41),
+									   to(#19911D),
+									   color-stop(.6,#54DE5D)) 
 }
