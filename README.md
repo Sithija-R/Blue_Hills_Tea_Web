@@ -2,7 +2,7 @@
 
 Welcome to the official website project for **Blue Hill Tea Factory** – a digital experience showcasing the legacy, products, and values of our tea production journey.
 
-🔗 **GitHub Repository:** [Blue_Hills_Tea_Web](https://github.com/Sithija-R/Blue_Hills_Tea_Web)
+🔗 **Live Preview:** [Blue_Hills_Tea_Web](https://blue-hills-tea-web-ch2x-git-devsithija-blue-hills-projects.vercel.app)
 
 ## 🚀 Project Overview
 
